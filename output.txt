@@ -1,0 +1,288 @@
+width : 4, thread : 18
+result : 1000000
+ELAPSED:2.54156
+counter[0]:249980
+counter[1]:250009
+counter[2]:249991
+counter[3]:250020
+width : 4, thread : 36
+result : 1000000
+ELAPSED:2.26586
+counter[0]:249983
+counter[1]:249995
+counter[2]:250005
+counter[3]:250017
+width : 4, thread : 72
+result : 1000000
+ELAPSED:2.10223
+counter[0]:249977
+counter[1]:250012
+counter[2]:249989
+counter[3]:250022
+width : 4, thread : 144
+result : 1000000
+ELAPSED:3.89893
+counter[0]:249759
+counter[1]:250061
+counter[2]:249927
+counter[3]:250253
+width : 8, thread : 18
+result : 1000000
+ELAPSED:15.0379
+counter[0]:124992
+counter[1]:125000
+counter[2]:124996
+counter[3]:125005
+counter[4]:125003
+counter[5]:124999
+counter[6]:125000
+counter[7]:125005
+width : 8, thread : 36
+result : 1000000
+ELAPSED:3.39372
+counter[0]:124990
+counter[1]:124999
+counter[2]:124995
+counter[3]:125006
+counter[4]:124998
+counter[5]:125006
+counter[6]:124999
+counter[7]:125007
+width : 8, thread : 72
+result : 1000000
+ELAPSED:4.04559
+counter[0]:124992
+counter[1]:125005
+counter[2]:124994
+counter[3]:125002
+counter[4]:124996
+counter[5]:125004
+counter[6]:124997
+counter[7]:125010
+width : 8, thread : 144
+result : 1000000
+ELAPSED:3.56789
+counter[0]:124918
+counter[1]:124993
+counter[2]:124978
+counter[3]:125053
+counter[4]:124945
+counter[5]:125033
+counter[6]:125009
+counter[7]:125071
+width : 16, thread : 18
+result : 1000000
+ELAPSED:157.74
+counter[0]:62499
+counter[1]:62503
+counter[2]:62501
+counter[3]:62506
+counter[4]:62491
+counter[5]:62501
+counter[6]:62503
+counter[7]:62502
+counter[8]:62498
+counter[9]:62500
+counter[10]:62498
+counter[11]:62503
+counter[12]:62493
+counter[13]:62500
+counter[14]:62498
+counter[15]:62504
+width : 16, thread : 36
+result : 1000000
+ELAPSED:26.3608
+counter[0]:62497
+counter[1]:62499
+counter[2]:62500
+counter[3]:62499
+counter[4]:62497
+counter[5]:62501
+counter[6]:62498
+counter[7]:62506
+counter[8]:62498
+counter[9]:62499
+counter[10]:62499
+counter[11]:62502
+counter[12]:62499
+counter[13]:62501
+counter[14]:62500
+counter[15]:62505
+width : 16, thread : 72
+result : 1000000
+ELAPSED:4.41171
+counter[0]:62496
+counter[1]:62501
+counter[2]:62500
+counter[3]:62500
+counter[4]:62498
+counter[5]:62503
+counter[6]:62500
+counter[7]:62503
+counter[8]:62496
+counter[9]:62500
+counter[10]:62499
+counter[11]:62504
+counter[12]:62497
+counter[13]:62502
+counter[14]:62499
+counter[15]:62502
+width : 16, thread : 144
+result : 1000000
+ELAPSED:4.76897
+counter[0]:62477
+counter[1]:62495
+counter[2]:62484
+counter[3]:62514
+counter[4]:62488
+counter[5]:62501
+counter[6]:62499
+counter[7]:62516
+counter[8]:62487
+counter[9]:62498
+counter[10]:62493
+counter[11]:62517
+counter[12]:62492
+counter[13]:62512
+counter[14]:62503
+counter[15]:62524
+width : 32, thread : 18
+result : 1000000
+ELAPSED:258.288
+counter[0]:31251
+counter[1]:31250
+counter[2]:31250
+counter[3]:31250
+counter[4]:31251
+counter[5]:31244
+counter[6]:31250
+counter[7]:31250
+counter[8]:31251
+counter[9]:31249
+counter[10]:31250
+counter[11]:31250
+counter[12]:31251
+counter[13]:31258
+counter[14]:31250
+counter[15]:31250
+counter[16]:31251
+counter[17]:31249
+counter[18]:31250
+counter[19]:31250
+counter[20]:31250
+counter[21]:31243
+counter[22]:31249
+counter[23]:31250
+counter[24]:31250
+counter[25]:31249
+counter[26]:31250
+counter[27]:31249
+counter[28]:31250
+counter[29]:31257
+counter[30]:31249
+counter[31]:31249
+width : 32, thread : 36
+result : 1000000
+ELAPSED:107.677
+counter[0]:31249
+counter[1]:31251
+counter[2]:31250
+counter[3]:31251
+counter[4]:31250
+counter[5]:31250
+counter[6]:31251
+counter[7]:31249
+counter[8]:31252
+counter[9]:31250
+counter[10]:31250
+counter[11]:31251
+counter[12]:31248
+counter[13]:31249
+counter[14]:31251
+counter[15]:31248
+counter[16]:31248
+counter[17]:31250
+counter[18]:31250
+counter[19]:31251
+counter[20]:31249
+counter[21]:31249
+counter[22]:31250
+counter[23]:31249
+counter[24]:31251
+counter[25]:31253
+counter[26]:31251
+counter[27]:31252
+counter[28]:31248
+counter[29]:31250
+counter[30]:31250
+counter[31]:31249
+width : 32, thread : 72
+result : 1000000
+ELAPSED:26.4309
+counter[0]:31250
+counter[1]:31250
+counter[2]:31249
+counter[3]:31249
+counter[4]:31249
+counter[5]:31251
+counter[6]:31249
+counter[7]:31251
+counter[8]:31251
+counter[9]:31248
+counter[10]:31250
+counter[11]:31250
+counter[12]:31249
+counter[13]:31250
+counter[14]:31248
+counter[15]:31251
+counter[16]:31249
+counter[17]:31251
+counter[18]:31249
+counter[19]:31251
+counter[20]:31249
+counter[21]:31250
+counter[22]:31250
+counter[23]:31251
+counter[24]:31249
+counter[25]:31252
+counter[26]:31251
+counter[27]:31251
+counter[28]:31249
+counter[29]:31251
+counter[30]:31251
+counter[31]:31251
+width : 32, thread : 144
+result : 1000000
+ELAPSED:27.9266
+counter[0]:31224
+counter[1]:31239
+counter[2]:31239
+counter[3]:31255
+counter[4]:31239
+counter[5]:31250
+counter[6]:31249
+counter[7]:31268
+counter[8]:31230
+counter[9]:31239
+counter[10]:31251
+counter[11]:31264
+counter[12]:31243
+counter[13]:31249
+counter[14]:31254
+counter[15]:31276
+counter[16]:31227
+counter[17]:31237
+counter[18]:31244
+counter[19]:31262
+counter[20]:31241
+counter[21]:31258
+counter[22]:31251
+counter[23]:31268
+counter[24]:31239
+counter[25]:31241
+counter[26]:31250
+counter[27]:31262
+counter[28]:31247
+counter[29]:31257
+counter[30]:31266
+counter[31]:31281
