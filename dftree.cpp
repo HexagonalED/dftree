@@ -147,6 +147,7 @@ class dfBalancer{
           return 1;
         }
       }catch(int e){
+        cout<<"TIMEOUT"<<endl;
         return toggle->traverse();
       }
     }
@@ -231,6 +232,9 @@ int main(){
 //      cout<<"Timestart : "<<start.count()<<endl;
 //      cout<<"Timeend : "<<end.count()<<endl;
       cout<<"ELAPSED:"<<elapsed.count()<<endl;
+      for(int i=0;i<width[w];i++){
+        cout<<"COUNTER["<<i<<"]:"<<leafCounters[i]<<endl;
+      }
       delete tree;
       delete leafCounters;
     }
