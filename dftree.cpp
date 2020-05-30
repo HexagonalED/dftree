@@ -8,7 +8,7 @@
 
 //#include "Exchanger.h"
 
-#define TIMEOUT 100/*ms*/
+#define TIMEOUT 1000000/*ns*/
 
 #define EMPTY 0
 #define WAITING 1
@@ -49,12 +49,9 @@ class valExchanger{
       auto milliTimeout = nanoseconds(timeout);
       auto now_ms = duration_cast<nanoseconds>(time_point_cast<nanoseconds>(system_clock::now()).time_since_epoch());
       auto timeBound = now_ms+milliTimeout;
-      //cout<<"TIMECONSTRATIN[now : "<<now_ms.count()<<", timeBound : "<<timeBound<<"]"<<endl;
       while(true){
-//        //cout<<"in loop"<<endl;
         auto newNow_ms = duration_cast<nanoseconds>(time_point_cast<nanoseconds>(system_clock::now()).time_since_epoch());
         if(newNow_ms>timeBound){
-          //cout<<"pid miss!"<<endl;
           throw TIMEOUTEXCEPTION;
         }
         pidStatusPair slotValue = slot.load();
@@ -64,26 +61,17 @@ class valExchanger{
         int stat = slotValue.status;
         switch(stat){
           case EMPTY:
-            //cout<<"empty"<<endl;
             if(slot.compare_exchange_weak(slotValue,desired_WAITING)){
-              //cout<<"cased_empty"<<endl;
-            //if(slot.compare_exchange_weak(slotValue,input) && status.compare_exchange_weak(stat,WAITING)){
               while(duration_cast<nanoseconds>(time_point_cast<nanoseconds>(system_clock::now()).time_since_epoch())<timeBound){
-                 //cout<<"while not out of bound_empty("<<duration_cast<milliseconds>(time_point_cast<milliseconds>(now).time_since_epoch()).count()<<")boundto("<<timeBound<<")"<<endl;
                 int val = slot.load().pid;
-                int valStat = slot.load().status;
-                if(valStat ==BUSY){
+                if(slot.load().status ==BUSY){
                   slot=initVal;
                   return val;
                 }
               }
-              int wVal=WAITING;
               if(slot.compare_exchange_weak(desired_WAITING,initVal)){
-              //if(slot.compare_exchange_weak(input,-1)&&status.compare_exchange_weak(wVal,EMPTY)){
-                //cout<<"timeout_waiting"<<endl;
                 throw TIMEOUTEXCEPTION;
               }else{
-                //cout<<"cas not work, return val"<<endl;
                 int val = slot.load().pid;
                 slot=initVal;
                 return val;
@@ -91,10 +79,7 @@ class valExchanger{
             }
             break;
           case WAITING:
-            //cout<<"waiting"<<endl;
             if(slot.compare_exchange_weak(slotValue,desired_BUSY)){
-              //cout<<"cased_waiting"<<endl;
-            //if(slot.compare_exchange_weak(slotValue,input) && status.compare_exchange_weak(stat,BUSY)){
               return slotValue.pid;
             }
             break;
@@ -106,6 +91,7 @@ class valExchanger{
       }
     }
 };
+
 class prism{
   public :
     valExchanger *slots;
@@ -216,12 +202,18 @@ int main(){
       for(int i=0;i<width[w];i++){
         leafCounters[i]=0;
       }
-      int nInput=nToken/nThread[t];
+      int* inputArray = new int[nThread[t]];
+      for(int i=0;i<nThread[t];i++){
+        inputArray[i]=nToken/nThread[t];
+      }
+      for(int i=0;i<nToken%nThread[t];i++){
+        inputArray[i]++;
+      }
 
       auto start = system_clock::now();
 
       for(int i=0;i<nThread[t];i++){
-        thrd[i]=thread(run,tree,i,nInput,leafCounters);
+        thrd[i]=thread(run,tree,i,inputArray[i],leafCounters);
       }
       for(int i=0;i<nThread[t];i++){
         thrd[i].join();
